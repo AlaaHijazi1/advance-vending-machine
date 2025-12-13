@@ -1,7 +1,7 @@
 import AppRoutes from "./AppRoutes";
 import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -17,11 +17,11 @@ const ScrollAndToastHandler = () => {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollAndToastHandler />
       <AppRoutes />
       <ToastContainer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
