@@ -3,11 +3,13 @@ import "react-confirm-alert/src/react-confirm-alert.css";
 import { showSuccessToast } from "../../utils/toast";
 import { showFailToast } from "../../utils/toast";
 import { ProductsContext } from "../../context/productsContext";
+import { useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import axios from "axios";
 
 function ProductCard({ id, name, price, available, image }) {
   const { products, setProducts } = useContext(ProductsContext);
+  const navigate = useNavigate();
 
   const [orderStatus, setOrderStatus] = useState("");
 
@@ -42,6 +44,9 @@ function ProductCard({ id, name, price, available, image }) {
               setTimeout(() => {
                 setOrderStatus("");
               }, 5000);
+              setTimeout(() => {
+                navigate("/");
+              }, 6000);
             } catch (error) {
               console.error(error);
               showFailToast("Payment Failed!");
