@@ -1,1 +1,0 @@
-import{j as s,L as n}from"./index-Dml541h0.js";function e(){return s.jsx("main",{className:"scan-qr-page",children:s.jsxs("section",{className:"scan-qr-section",children:[s.jsx("h1",{className:"scan-qr-title",children:"Ice Cream Vending"}),s.jsx(n,{to:"/shop",children:s.jsx("button",{className:"scan-qr-btn",children:"Scan QR"})})]})})}export{e as default};
